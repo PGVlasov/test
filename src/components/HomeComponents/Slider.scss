@@ -1,0 +1,56 @@
+.carousel-shadow {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #000000 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background: black;
+  border: 2px solid white;
+  display: block;
+  position: relative;
+  opacity: 1;
+  &:hover {
+    background: white;
+    border: 2px solid black;
+    &:after {
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 9px;
+
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+  }
+}
+
+.carousel-control-prev-icon {
+  &:after {
+    transform: rotate(-45deg);
+    left: 12px;
+  }
+}
+.carousel-control-next-icon {
+  &:after {
+    transform: rotate(135deg);
+    left: 7px;
+  }
+}
